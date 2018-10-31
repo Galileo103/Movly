@@ -231,6 +231,14 @@
     <Compile Include="Migrations\201810312154346_UpdatePopulateMembershipTypes.Designer.cs">
       <DependentUpon>201810312154346_UpdatePopulateMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810312207401_AddBitrhDayColumn.cs" />
+    <Compile Include="Migrations\201810312207401_AddBitrhDayColumn.Designer.cs">
+      <DependentUpon>201810312207401_AddBitrhDayColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810312212364_AddBitrhDayColumn1.cs" />
+    <Compile Include="Migrations\201810312212364_AddBitrhDayColumn1.Designer.cs">
+      <DependentUpon>201810312212364_AddBitrhDayColumn1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -340,6 +348,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810312154346_UpdatePopulateMembershipTypes.resx">
       <DependentUpon>201810312154346_UpdatePopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810312207401_AddBitrhDayColumn.resx">
+      <DependentUpon>201810312207401_AddBitrhDayColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810312212364_AddBitrhDayColumn1.resx">
+      <DependentUpon>201810312212364_AddBitrhDayColumn1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
