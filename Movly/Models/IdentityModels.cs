@@ -20,6 +20,22 @@ namespace Movly.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Customer> Customers { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Customer>()
+                .Property(c => c.Name)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            modelBuilder.Entity<MembershipType>()
+                .Property(m => m.Name)
+                .IsRequired();
+
+            base.OnModelCreating(modelBuilder);
+        }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
