@@ -239,9 +239,18 @@
     <Compile Include="Migrations\201810312212364_AddBitrhDayColumn1.Designer.cs">
       <DependentUpon>201810312212364_AddBitrhDayColumn1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810312310003_AddMovieTable.cs" />
+    <Compile Include="Migrations\201810312310003_AddMovieTable.Designer.cs">
+      <DependentUpon>201810312310003_AddMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810312314593_PopulateGenre.cs" />
+    <Compile Include="Migrations\201810312314593_PopulateGenre.Designer.cs">
+      <DependentUpon>201810312314593_PopulateGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -315,6 +324,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -354,6 +364,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810312212364_AddBitrhDayColumn1.resx">
       <DependentUpon>201810312212364_AddBitrhDayColumn1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810312310003_AddMovieTable.resx">
+      <DependentUpon>201810312310003_AddMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810312314593_PopulateGenre.resx">
+      <DependentUpon>201810312314593_PopulateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -21,6 +21,7 @@ namespace Movly.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Movie> Movies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -32,6 +33,17 @@ namespace Movly.Models
             modelBuilder.Entity<MembershipType>()
                 .Property(m => m.Name)
                 .IsRequired();
+
+
+            modelBuilder.Entity<Movie>()
+                .Property(m => m.Name)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            modelBuilder.Entity<Genre>()
+                .Property(g => g.Name)
+                .IsRequired()
+                .HasMaxLength(255);
 
             base.OnModelCreating(modelBuilder);
         }
