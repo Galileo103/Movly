@@ -8,7 +8,7 @@
 
 <ul>
     <li>@Html.DisplayNameFor(m => m.Genre): @Model.Genre.Name</li>
-    <li>@Html.DisplayNameFor(m => m.ReleaseDate): @Model.ReleaseDate.ToLongDateString()</li>
+    <li>@Html.DisplayNameFor(m => m.ReleaseDate): @Model.ReleaseDate.Value.ToLongDateString()</li>
     <li>@Html.DisplayNameFor(m => m.DateAdded): @Model.DateAdded.Date.ToLongDateString()</li>
     <li>@Html.DisplayNameFor(m => m.NumberInStock): @Model.NumberInStock</li>
 </ul>

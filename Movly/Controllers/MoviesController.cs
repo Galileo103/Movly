@@ -94,6 +94,10 @@ namespace Movly.Controllers
 
             return View("MovieForm", viewModel);
         }
+
+
+
+
         private IEnumerable<Movie> GetMovies()
         {
             return new List<Movie>
