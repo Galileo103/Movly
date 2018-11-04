@@ -1,35 +1,33 @@
 ﻿@model Movly.ViewModels.CustomerFormViewModel
 @{
+    ViewBag.Title = Model.Title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@if (Model.Customer == null)
-{
-    ViewBag.Title = "New Customer";
-    <h2>New Customer</h2>
-}
-else
-{
-    ViewBag.Title = "Edit Customer";
-    <h2>Edit Customer</h2>
-}
+<h2>@Model.Title</h2>
 
 @using (@Html.BeginForm("Save", "Customers"))
 {
+    @Html.ValidationSummary(true, "Please, Fix The Following Errors.")
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.Name)
         @Html.TextBoxFor(c => c.Customer.Name, new {@class = "form-control"})
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(c => c.Customer.Birthdate)
-        @Html.TextBoxFor(c => c.Customer.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Customer.Name)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(c => c.Customer.MembershipTypeId)
         @Html.DropDownListFor(c => c.Customer.MembershipTypeId,new SelectList(Model.MembershipTypes, "Id", "Name"),"Select Membership Type" , new {@class = "form-control"})
+        @Html.ValidationMessageFor(c => c.Customer.MembershipTypeId)
     </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.Customer.Birthdate)
+        @Html.TextBoxFor(c => c.Customer.Birthdate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Customer.Birthdate)
+
+    </div>
+
 
     <div class="checkbox">
         <label>
@@ -37,6 +35,14 @@ else
         </label>
     </div>
     @Html.HiddenFor(m => m.Customer.Id)
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
 }
 
+
+@* For Enable client-side validation *@
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
