@@ -23,6 +23,8 @@ namespace Movly.Dtos
         [Required]
         public byte? NumberInStock { get; set; }
 
+        public GenreDto Genre { get; set; }
+
         [Required]
         public byte? GenreId { get; set; }
     }
