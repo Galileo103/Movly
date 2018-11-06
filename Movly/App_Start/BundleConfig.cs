@@ -30,6 +30,9 @@ namespace Movly
                        "~/Content/bootstrap-lumen.css",
                        "~/Content/datatables/css/datatables.bootstrap.css",
                        "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/jqueryajax").Include(
+                       "~/Scripts/customerdatatable.js"));
         }
     }
 }
