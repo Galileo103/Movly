@@ -17,6 +17,8 @@ namespace Movly.Dtos
 
         public bool IsSubscribedToNewsletter { get; set; }
 
+        public MembershipTypeDto MembershipType { get; set; }
+
         //[MinAgeForChooseMembershipType]
         public DateTime? Birthdate { get; set; }
 
