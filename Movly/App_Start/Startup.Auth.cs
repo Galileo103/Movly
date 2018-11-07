@@ -54,9 +54,11 @@ namespace Movly
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            // Should install this version to work
+            // Install - Package Microsoft.Owin.Security.Facebook - Version:3.1.0
+            app.UseFacebookAuthentication(
+               appId: "359930224760325",
+               appSecret: "89836c715997e1033e77c96a2a8989d4");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
