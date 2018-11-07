@@ -25,7 +25,11 @@ namespace Movly.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            if(User.IsInRole(RoleName.CanManageMovies))
+            {
+                return View("IndexForManager");
+            }
+            return View("IndexForUser");
         }
 
         public ActionResult Details(int id)
@@ -39,6 +43,7 @@ namespace Movly.Controllers
             return View(movie);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var viewModel = new MovieFormViewModel
