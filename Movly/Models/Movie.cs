@@ -11,7 +11,7 @@ namespace Movly.Models
 {
     public class Movie
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
@@ -27,6 +27,8 @@ namespace Movly.Models
         [Range(1, 20)]
         [Required]
         public byte? NumberInStock { get; set; }
+
+        public byte NumberAvailable { get; set; }
 
         public Genre Genre { get; set; }
 

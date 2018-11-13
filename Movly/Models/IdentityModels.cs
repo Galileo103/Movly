@@ -24,6 +24,8 @@ namespace Movly.Models
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MembershipType> MembershipTypes { get; set; }
         public DbSet<Genre> Genre { get; set; }
+        public DbSet<Rental> Rental { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

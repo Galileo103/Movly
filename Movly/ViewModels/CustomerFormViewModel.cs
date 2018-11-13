@@ -16,8 +16,8 @@ namespace Movly.ViewModels
             get
             {
                 if (Customer != null && Customer.Id != 0)
-                    return "Edit Movie";
-                return "New Movie";
+                    return "Edit Customer";
+                return "New Customer";
             }
         }
     }
